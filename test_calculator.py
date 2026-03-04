@@ -1,5 +1,5 @@
 import unittest
-from calculator import add, subtract, multiply
+from calculator import add, subtract
 
 class TestCalculator(unittest.TestCase):
 
@@ -9,8 +9,7 @@ class TestCalculator(unittest.TestCase):
     def test_subtract(self):
         self.assertEqual(subtract(10, 4), 6)
 
-    def multiply(self):
-        self.assertEqual(multiply(10, 4), 40)    
+    
 
 if __name__ == '__main__':
     unittest.main()
