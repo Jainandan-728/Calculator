@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Clone') {
+            steps {
+                git url: 'https://github.com/Jainandan-728/Calculator.git', branch: 'master'
+            }
+        }
+
         stage('Create Virtual Environment') {
             steps {
                 sh 'python3 -m venv venv'
