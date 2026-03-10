@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
+        stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/Jainandan-728/Calculator.git', branch: 'master'
+                git 'https://github.com/Jainandan-728/Calculator.git'
             }
         }
 
