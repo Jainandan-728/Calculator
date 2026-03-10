@@ -1,15 +1,15 @@
-import unittest
-from calculator import add, subtract
+# test_calculator.py
 
-class TestCalculator(unittest.TestCase):
+import calculator
 
-    def test_add(self):
-        self.assertEqual(add(5, 3), 8)
+def test_add():
+    assert calculator.add(2,3) == 5
 
-    def test_subtract(self):
-        self.assertEqual(subtract(10, 4), 6)
+def test_subtract():
+    assert calculator.subtract(5,2) == 3
 
-    
+def test_multiply():
+    assert calculator.multiply(3,4) == 12
 
-if __name__ == '__main__':
-    unittest.main()
+def test_divide():
+    assert calculator.divide(10,2) == 5
