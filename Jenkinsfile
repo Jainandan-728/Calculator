@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/Jainandan-728/Calculator.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'pip3 install -r requirements.txt'
@@ -23,7 +17,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'pytest'
+                sh 'python3 -m pytest'
             }
         }
     }
