@@ -2,21 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+
+        stage('Checkout Code') {
             steps {
-                git 'https://github.com/Jainandan-728/Calculator.git'
+                git 'https://github.com/YOUR_USERNAME/jenkins-simple-demo.git'
             }
         }
 
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Building project...'
+                sh 'pip install -r requirements.txt'
             }
         }
 
-        stage('Test') {
+        stage('Run Calculator') {
             steps {
-                echo 'Running tests...'
+                sh 'python calculator.py'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh 'pytest'
             }
         }
     }
